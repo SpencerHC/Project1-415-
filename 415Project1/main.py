@@ -1,5 +1,6 @@
 #import matplotlib.pyplot as plt
 from fiboClass import fibonacciGCDTest
+from Task2 import Exponentiation
 from random import *
 def main():
     fTest = fibonacciGCDTest()
