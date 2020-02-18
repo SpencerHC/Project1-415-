@@ -1,12 +1,14 @@
 # import matplotlib.pyplot as plt
 from fiboClass import fibonacciGCDTest
 from Task2 import Exponentiation
+from Task3 import Sorting
 from random import *
 
 
 def main():
     fTest = fibonacciGCDTest()
     Etest = Exponentiation()
+    sTest = Sorting()
     test = int(input("1 for user test, 0 for computer generated scatterplot:\n"))
 
     if test == 1:
@@ -34,6 +36,18 @@ def main():
     else:
         print('** Exponentiation ** ')
         Etest.notUserTest()
+    if test == 1:
+        print('** Sorting ** ')
+        list = []
+        length = int(input('Length (integer): '))
+        for i in range(int(length)):
+           appendThis = int(input('Enter a number for your list: '))
+           list.append(appendThis)
+        print('Selection Sort: ')
+        print(sTest.SelectionSort(list))
 
-
+        print('Insertion Sort: ')
+        print(sTest.InsertionSort(list))
+    else:
+        sTest.notUserTest()
 main()
