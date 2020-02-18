@@ -1,7 +1,4 @@
 import matplotlib.pyplot as plt
-#Made it as a class to practice python over again, not sure if it really helped much at it all but at least its cleaner than all in main.
-#Practiced proper notation for python classes too, __ prefix indicated that its a private function.
-#Might be a little messy since I havent used python in a yearish
 class fibonacciGCDTest:
     
     def __init__(self):
@@ -24,9 +21,9 @@ class fibonacciGCDTest:
 
     def __gcd(self, m, n):
         if (n == 0):
-            return n
+            return m
         self.numOfMod+=1
-        return (self.__gcd(n, m % n))
+        return self.__gcd(n, m % n)
                 
     def fiboNotUserTest(self):
     #used when using a computer generated test
@@ -45,8 +42,6 @@ class fibonacciGCDTest:
         plt.xlabel('Index of Fibonacci Number')
         plt.ylabel('Number of Addition')
         plt.title('Fibonacci Analysis')
-        print("The Asymptotic complexity of the Fibonacci Algorithim is ")
-        print("(1+ sqrt(5))/2)^n") #don't know if this is right?
         plt.show()
         #to here
 
@@ -64,13 +59,12 @@ class fibonacciGCDTest:
         plt.xlabel('n')
         plt.ylabel('Number of Modulo')
         plt.title('Euclids GCD Analysis')
-        print("The Asymptotic complexity of Euclids GCD Algorithm is ")
-        #????????
         plt.show()
     def fiboUserTest(self, k):
         print("The fibonacci number at index " + str(k)+ " is: ")
         print(self.__fibo(k))
-        print(self.__gcd(self.__fibo(k+1), self.__fibo(k)))
+        print("The gcd of fibonacci number " + str(self.__fibo(k + 1)) + " and " + str(self.__fibo(k)))
+        print(self.__gcd(self.__fibo(k + 1), self.__fibo(k)))
 
 
 

@@ -2,6 +2,7 @@ from fiboClass import fibonacciGCDTest
 from Task2 import Exponentiation
 
 Etest = Exponentiation()
+Etest.notUserTest()
 a = int(input("Enter value for a:\n"))
 
 n = int(input("Enter value for n:\n"))
