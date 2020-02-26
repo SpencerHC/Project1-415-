@@ -53,7 +53,7 @@ class Exponentiation:
         return saved
 
     def notUserTest(self):
-        for i in range(1, 50):
+        for i in range(1, 100):
             self.DecreaseByOne(5, i)
             self.xAxis.append(i)
             self.yAxis.append(self.getByOneCount())
@@ -62,7 +62,7 @@ class Exponentiation:
         self.xAxis = []
         self.yAxis = []
 
-        for i in range(1, 50):
+        for i in range(1, 100):
             self.DecreaseByConstantFactor(5, i)
             self.xAxis.append(i)
             self.yAxis.append(self.getConstantFactorCount())
@@ -70,7 +70,7 @@ class Exponentiation:
         dcbcf =  plt.scatter(self.xAxis, self.yAxis, c='blue')
         self.xAxis = []
         self.yAxis = []
-        for i in range(1, 50):
+        for i in range(1, 100):
             self.DivideAndConquer(5, i)
             self.xAxis.append(i)
             self.yAxis.append(self.getDivideCount())
