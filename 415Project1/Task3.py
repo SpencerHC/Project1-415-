@@ -50,18 +50,18 @@ class Sorting:
 
     def notUserTest(self):
         #Sorted list gen, best case
-        self._generateGraphs('best')
-        self._generateGraphs('average')
-        self._generateGraphs('worst')
+        self._generateGraphs('Best')
+        self._generateGraphs('Average')
+        self._generateGraphs('Worst')
 
         #random list gen, average case
 
     def _generateGraphs(self, case):
-        if case == 'best':
+        if case == 'Best':
             listoList = self._generateSorted()
-        if case == 'average':
+        if case == 'Average':
             listoList = self._generateRandom()
-        if case == 'worst':
+        if case == 'Worst':
             listoList = self._generateReverse()
 
         self._generateXYAxisInsert(listoList)
