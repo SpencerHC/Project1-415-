@@ -30,8 +30,9 @@ class Sorting:
         for i in range(len(list)):
             curr = list[i]
             position = i
+            self.InsertionSortCount += 2
             while position > 0 and list[position-1] > curr:
-                self.InsertionSortCount += 1
+                self.InsertionSortCount += 2
                 list[position] = list[position-1]
                 position = position - 1
             list[position] = curr
