@@ -74,8 +74,8 @@ class Sorting:
         self.xAxis = []
         self.yAxis = []
         plt.xlabel('Size of List')
-        plt.ylabel('Number of Swaps')
-        plt.title(str(case) + ' Case for Insertion and Selection sort')
+        plt.ylabel('Number of Comparisons')
+        plt.title(str(case) + ' Case for Insertion and Selection Sort')
         plt.legend((sortedInsertion, sortedSelection), ('Insertion Sort', 'Selection Sort'))
         plt.show()
 
